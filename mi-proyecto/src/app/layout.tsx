@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
+"use client";
+
 import "./globals.css";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-export const metadata: Metadata = {
-  title: "Avellan publicidad",
-  description: "Jeje publicidad",
-};
+
 /*
 export default function RootLayout({
   children,
@@ -26,6 +25,8 @@ export default function RootLayout({
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [queryClient] = useState(() => new QueryClient());
+  
   return (
     <html>
       <body>
@@ -42,7 +43,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
 
-        <main>{children}</main>
+        <body>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </body>
 
         <footer className="flex flex-col items-center">
           <a href= "https://avellan.com.ar">avellan.com.ar</a>

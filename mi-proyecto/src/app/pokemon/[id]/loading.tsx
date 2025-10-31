@@ -1,12 +1,10 @@
-"use client";
-
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'; // ¡Importante! Importa los estilos
 
 function PokemonCardSkeleton() {
   return (
-    <div className="justify-items-center border border-gray-400 rounded-md p-5">
+    <div className="justify-center p-5 w-1/3 mx-auto pb-50">
       {/* Imagen */}
       <Skeleton height={240} width={240} />
 
@@ -20,3 +18,5 @@ function PokemonCardSkeleton() {
 }
 
 export default PokemonCardSkeleton;
+
+
