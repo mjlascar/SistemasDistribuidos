@@ -36,3 +36,36 @@ export async function DELETE(
         );
   }
 }
+
+export async function GET(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  try {
+      const id = parseInt(params.id);
+  
+      // Validar el parámetro
+      if (isNaN(id) || id<=0) {
+      return NextResponse.json(
+          { error: "El ID debe ser un número válido" },
+          { status: 400 }
+      );
+      }
+  
+      const pokemon = await db.getById(id);
+      
+      if (!pokemon) {
+         return NextResponse.json(
+           { error: "Pokemon no encontrado" },
+           { status: 404 }
+         );
+      }
+
+      return NextResponse.json(pokemon, { status: 200 });
+  } catch (error) {
+      return NextResponse.json(
+      { error: "Error al gettear pokemon" },
+      { status: 500 }
+      );
+}
+}

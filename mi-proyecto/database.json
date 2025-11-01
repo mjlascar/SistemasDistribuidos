@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": 25,
+    "name": "pikachu",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    }
+  },
+  {
+    "id": 12,
+    "name": "butterfree",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
+    }
+  },
+  {
+    "id": 8,
+    "name": "wartortle",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+    }
+  }
+]

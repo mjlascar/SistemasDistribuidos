@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useFavoriteById, useAddFavorite, useRemoveFavorite, useFavorites } from "../hooks/useFavorites";
+import { useAddFavorite, useRemoveFavorite, useFavorites } from "../hooks/useFavorites";
 
 
 export default function BotonFav({pokemon}) {
@@ -33,7 +33,7 @@ export default function BotonFav({pokemon}) {
             <button onClick={cambiaFavorito} disabled={isMutating}>
                 {isMutating ? 
                     (isFavorite ? "Eliminando..." : "Agregando...") 
-                    : (isFavorite ? "Eliminar de Favoritos" : "Agregar a Favoritos")
+                    : (isFavorite ? "Eliminar de Favoritos" : `Agregar a Favoritos`)
                 }
             </button>
         

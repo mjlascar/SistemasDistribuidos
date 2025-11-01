@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import ListaPokemon from "./components/ListaPokemon";
+import ListaFavoritos from "../components/ListaFavoritos";
 
 export default function Home(){
-
+  
   return (
     <div>
-      < ListaPokemon key="listaP" />
+      < ListaFavoritos key="listaF" />
     </div>
   );
 }

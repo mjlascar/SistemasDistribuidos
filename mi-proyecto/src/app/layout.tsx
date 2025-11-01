@@ -6,23 +6,6 @@ import React, { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
-/*
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="es">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}*/
-
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
@@ -39,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alt="Avellan logo"
               width={240}
             /> 
-            <Link href="/about">About</Link>
+            <Link href="/favorites">Favorites</Link>
           </nav>
         </header>
 

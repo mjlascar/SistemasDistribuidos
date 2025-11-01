@@ -38,7 +38,7 @@ export async function POST(request: Request) {
         name: body.name,
         
         sprites: {
-          front_default: body.sprite_url || "" // Asumiendo que el body trae el sprite
+          front_default: body.sprites.front_default || "" // Asumiendo que el body trae el sprite
         },
       });
       
