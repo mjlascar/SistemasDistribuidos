@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPokemon } from '../services/pokeapi';
 
