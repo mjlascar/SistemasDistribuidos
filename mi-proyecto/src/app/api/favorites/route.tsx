@@ -31,15 +31,24 @@ export async function POST(request: Request) {
           { status: 400 }
         );
       }
+
+      if (body.nombreFav && typeof body.nombreFav !== 'string') {
+        return NextResponse.json({ error: "Tipo de campo incorrecto para nombreFav" }, { status: 400 });
+      }
+
+      if (body.descripcionFav && typeof body.descripcionFav !== 'string') {
+        return NextResponse.json({ error: "Tipo de campo incorrecto para descripcionFav" }, { status: 400 });
+      }
   
       // Si todo esta bien, procesamos
       const newPokemon = await db.create({
         id: body.id,
         name: body.name,
-        
         sprites: {
           front_default: body.sprites.front_default || "" // Asumiendo que el body trae el sprite
         },
+        nombreFav: body.nombreFav,
+        descripcionFav: body.descripcionFav,
       });
       
       return NextResponse.json(newPokemon, { status: 201 });

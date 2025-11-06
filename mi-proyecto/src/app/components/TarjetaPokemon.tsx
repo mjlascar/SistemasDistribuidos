@@ -5,14 +5,7 @@ import { useRouter } from "next/navigation";
 import PokemonCardSkeleton from '../loading';
 import usePokemon from "../hooks/usePokemon";
 import BotonFav from "./BotonFav";
-
-interface Pokemon {
-  id: number;
-  name: string;
-  sprites: {
-    front_default: string;
-  };
-}
+import { Pokemon } from "../lib/database";
 
 type TarjetaPokemonProps = {
   id?: number;         // 'id' es opcional
@@ -34,7 +27,6 @@ export default function TarjetaPokemon({id, pokemon: pokemonProp}: TarjetaPokemo
   if (isError && shouldFetch) {
     return null;
   }
-  
 
     return (
       <div className="justify-items-center border border-gray-400 rounded-md p-5">
@@ -47,6 +39,23 @@ export default function TarjetaPokemon({id, pokemon: pokemonProp}: TarjetaPokemo
           />
           <p className="text-sm text-gray-500">N.º {pokemon?.id.toString().padStart(3, '0')}</p>
           <h2 className="text-xl font-bold">{pokemon?.name.toUpperCase()}</h2>
+            {/* si 'nombreFav' existe, muestra este bloque */}
+          {pokemon.nombreFav && (
+            <div className="mt-4 pt-2 border-t border-gray-700 text-center">
+              <p className="text-xs text-yellow-500 font-semibold">Apodo:</p>
+              <h3 className="text-lg font-semibold text-yellow-400">{pokemon.nombreFav}</h3>
+            </div>
+          )}
+            {/* si 'descripcionFav' existe, muestra este bloque */}
+          {pokemon.descripcionFav && (
+            <div className="mt-3 text-center">
+              <p className="text-xs text-gray-400">Descripcion:</p>
+              <p className="text-sm text-gray-300 italic">
+                "{pokemon.descripcionFav}"
+              </p>
+            </div>
+          )}
+
         </div>
         <BotonFav key={id} pokemon={pokemon} />
       </div>

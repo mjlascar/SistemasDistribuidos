@@ -4,20 +4,17 @@
     "name": "pikachu",
     "sprites": {
       "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-    }
+    },
+    "nombreFav": "perro electrico",
+    "descripcionFav": "Lorem ipsum dolor sit amet consectetur adipiscing elit viverra vitae ullamcorper, enim sagittis sem bibendum gravida laoreet tempor mi erat elementum leo, dapibus quis cursus nam integer dui tortor sociis eget. Ac fermentum natoque montes parturient."
   },
   {
-    "id": 12,
-    "name": "butterfree",
+    "id": 2,
+    "name": "ivysaur",
     "sprites": {
-      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
-    }
-  },
-  {
-    "id": 8,
-    "name": "wartortle",
-    "sprites": {
-      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
-    }
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+    },
+    "nombreFav": "perro",
+    "descripcionFav": ""
   }
 ]
