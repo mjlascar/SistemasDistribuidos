@@ -16,5 +16,14 @@
     },
     "nombreFav": "perro",
     "descripcionFav": ""
+  },
+  {
+    "id": 4,
+    "name": "charmander",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    },
+    "nombreFav": "perro fuego",
+    "descripcionFav": "ta que arde"
   }
 ]
